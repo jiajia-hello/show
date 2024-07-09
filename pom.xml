@@ -60,7 +60,6 @@
                 <version>${spring-boot.version}</version>
                 <configuration>
                     <mainClass>com.example.show.ShowApplication</mainClass>
-                    <skip>true</skip>
                 </configuration>
                 <executions>
                     <execution>
@@ -72,6 +71,44 @@
                 </executions>
             </plugin>
         </plugins>
+        <resources>
+            <resource>
+                <directory>../show/src/main/resources</directory>
+                <includes>
+                    <include>**/*.*</include>
+                </includes>
+                <filtering>true</filtering>
+            </resource>
+
+        </resources>
     </build>
+
+
+<!--    &lt;!&ndash; 打包格式 &ndash;&gt;-->
+<!--    <packaging>jar</packaging>-->
+
+<!--    &lt;!&ndash; 打包插件 &ndash;&gt;-->
+<!--    <build>-->
+<!--        <plugins>-->
+<!--            <plugin>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--                <configuration>-->
+<!--                    <executable>true</executable>-->
+<!--                    <layout>JAR</layout>-->
+<!--                </configuration>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <goals>-->
+<!--                            <goal>repackage</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <attach>false</attach>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
+<!--        </plugins>-->
+<!--    </build>-->
 
 </project>
